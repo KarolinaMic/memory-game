@@ -1,18 +1,9 @@
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-}
-
 .card {
-  flex: 0 0 calc(25% - 15px); /* 4 karty w rzędzie */
-  max-width: 200px;
   position: relative;
 }
 
 .card img {
-  width: 100%;
+  width: 90%;
   display: block;
   border: 2px solid #ffffff;
   border-radius: 6px;
@@ -20,36 +11,13 @@
 
 .card .front {
   transform: rotateY(90deg);
-  transition: transform 0.2s ease-in;
   position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .flipped .front {
   transform: rotateY(0deg);
-  transition-delay: 0.2s;
 }
 
-.card .back {
-  transition: transform 0.2s ease-in;
-  transition-delay: 0.2s;
-}
 
-.flipped .back {
-  transform: rotateY(90deg);
-  transition-delay: 0s;
-}
 
-/* Responsywność */
-@media (max-width: 768px) {
-  .card {
-    flex: 0 0 calc(50% - 15px);
-  }
-}
 
-@media (max-width: 480px) {
-  .card {
-    flex: 0 0 100%;
-  }
-}
